@@ -1,0 +1,33 @@
+<html>
+    
+<head>
+<h1>Welcome to To-Do list</h1>
+</head>
+<body>
+<form>
+    <input type = "text" id = "content" placeholder="Your Task" value = "">
+    <button type = "button" onclick = "addtask()"> Add Task</button>
+</form>
+
+<ul id = "list">
+<li>Wake up </li>
+</ul>
+<script>
+    function addtask(){
+    var k = document.getElementById("content").value;
+   // alert(k);    
+    var t = document.createElement("LI")
+    var tex = document.createTextNode(k);
+        t.appendChild(tex);
+        document.getElementById("list").appendChild(t);
+        document.getElementById("content").value= "";
+   // document.getElementById("list").innerHTML += `<li>${k}</li>`;
+   // document.getElementById("content").value = "";
+    }
+    </script>
+
+
+
+</body>
+
+</html>
